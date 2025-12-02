@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old English vs. Middle English: Key Changes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* New Color Palette: Brown, Orange, Yellowish */
+        body {
+            /* Light yellow/tan background */
+            font-family: 'Inter', sans-serif;
+            background-color: #fef3c7; /* Amber-100 */
+            color: #44403c; /* Stone-800 (Dark Brown) */
+        }
+        .card {
+            /* Creamy card background */
+            background-color: #fffbeb; /* Yellow-50 */
+            border-radius: 0.75rem;
+            box-shadow: 0 5px 10px -3px rgba(180, 83, 9, 0.1), 0 2px 4px -2px rgba(180, 83, 9, 0.05); /* Soft brown shadow */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .header-bg {
+            /* Dark burnt orange header background */
+            background-color: #b45309; /* Amber-800 */
+            color: #fffbeb; /* Light cream text */
+            border-radius: 0.75rem 0.75rem 0 0;
+            padding: 1.5rem;
+        }
+        .table-header {
+            /* Light orange/yellow table header */
+            background-color: #fcd34d; /* Amber-300 */
+            color: #78350f; /* Amber-900 (Darker brown for contrast) */
+            font-weight: 700;
+        }
+        td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #fde68a; /* Soft yellow border */
+        }
+        .change-summary {
+            /* Deep orange accent color */
+            font-weight: 700;
+            color: #d97706; /* Amber-700 */
+        }
+        .table-container {
+            overflow-x: auto;
+            border: 1px solid #fde68a;
+            border-radius: 0.5rem;
+        }
+        .section-title {
+            color: #713f12; /* Amber-800/Brown */
+        }
+        
+        /* Styles for the interactive Tabs */
+        .tab-button {
+            padding: 0.5rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            border: 2px solid #b45309; /* Amber-800 border */
+            background-color: #fffbeb; /* Light cream */
+            color: #b45309; /* Amber-800 text */
+        }
+        .tab-button:hover {
+            background-color: #fef3c7; /* Amber-100 on hover */
+        }
+        .tab-button.active {
+            background-color: #b45309; /* Dark burnt orange for active tab */
+            color: #fffbeb; /* Light cream text for active tab */
+            box-shadow: 0 4px 6px -1px rgba(180, 83, 9, 0.2), 0 2px 4px -2px rgba(180, 83, 9, 0.1);
+        }
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-6xl mx-auto">
+        <!-- Main Header -->
+        <header class="header-bg mb-6">
+            <h1 class="text-3xl font-bold">Old English vs. Middle English</h1>
+            <p class="text-amber-100 mt-1">Key Linguistic Transformations (c. 1150–1500)</p>
+        </header>
+
+        <!-- Interactive Tab Navigation -->
+        <div class="flex space-x-2 sm:space-x-4 mb-6 justify-center">
+            <button id="tab-grammar" onclick="showSection('grammar')" class="tab-button">
+                I. Gramática
+            </button>
+            <button id="tab-vocabulary" onclick="showSection('vocabulary')" class="tab-button">
+                II. Vocabulario
+            </button>
+            <button id="tab-sound" onclick="showSection('sound')" class="tab-button">
+                III. Sonido y Ortografía
+            </button>
+        </div>
+
+
+        <!-- Section 1: Grammar (Content) -->
+        <div id="grammar" class="card card-section">
+            <h2 class="text-xl font-bold section-title mb-4 flex items-center">
+                <!-- Icon color changed via custom CSS class -->
+                <svg class="w-6 h-6 mr-2 section-title" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                I. Grammar (Morfología y Sintaxis)
+            </h2>
+            <p class="text-stone-600 mb-4">The shift from a synthetic (inflected) to an analytic (fixed word order) language.</p>
+
+            <div class="table-container">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Feature</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Old English (c. 450–1150)</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Middle English (c. 1150–1500)</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Change Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Case System</td>
+                            <td>Highly inflected (4 main cases) marked by complex endings.</td>
+                            <td>Greatly simplified; most case endings lost. Genitive ('s) survives.</td>
+                            <td class="change-summary">Simplification of Inflections</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Gender</td>
+                            <td>Grammatical Gender (nouns had masc., fem., or neut. gender).</td>
+                            <td>Natural Gender (gender based on sex). Grammatical gender lost.</td>
+                            <td class="change-summary">Loss of Grammatical Gender</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Word Order</td>
+                            <td>Freer word order due to rich inflections.</td>
+                            <td>Fixed S-V-O word order became essential for meaning.</td>
+                            <td class="change-summary">Shift to Fixed S-V-O Order</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 2: Vocabulary (Content) -->
+        <div id="vocabulary" class="card card-section" style="display: none;">
+            <h2 class="text-xl font-bold section-title mb-4 flex items-center">
+                <svg class="w-6 h-6 mr-2 section-title" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                II. Vocabulary (Lexicon)
+            </h2>
+            <p class="text-stone-600 mb-4">The influx of French words following the Norman Conquest (1066).</p>
+
+            <div class="table-container">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Source</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Old English (c. 450–1150)</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Middle English (c. 1150–1500)</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Impact Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">French (Anglo-Norman)</td>
+                            <td>Vocabulary almost entirely Germanic.</td>
+                            <td>Massive intake of words (law, politics, fine arts, religion).</td>
+                            <td class="change-summary">Lexical Expansion</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Old Norse</td>
+                            <td>Already had significant influence in Northern dialects.</td>
+                            <td>Continued absorption of common words (e.g., *sky, egg*).</td>
+                            <td class="change-summary">Integration of Common Terms</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Native Words</td>
+                            <td>Core of the language.</td>
+                            <td>Many native words lost or replaced by French synonyms.</td>
+                            <td class="change-summary">Loss of Native Lexemes</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Section 3: Sound & Spelling (Content) -->
+        <div id="sound" class="card card-section" style="display: none;">
+            <h2 class="text-xl font-bold section-title mb-4 flex items-center">
+                <svg class="w-6 h-6 mr-2 section-title" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5s3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18s-3.332.477-4.5 1.253"></path></svg>
+                III. Sound & Spelling (Phonology & Orthography)
+            </h2>
+            <p class="text-stone-600 mb-4">Changes in pronunciation and the loss of unique Germanic letters.</p>
+
+            <div class="table-container">
+                <table class="min-w-full divide-y divide-gray-200">
+                    <thead>
+                        <tr class="table-header">
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Feature</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Old English (c. 450–1150)</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Middle English (c. 1150–1500)</th>
+                            <th class="px-6 py-3 text-left text-xs uppercase tracking-wider">Change Summary</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200 text-sm">
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Special Letters</td>
+                            <td>Used unique Germanic letters: **Þ** (Thorn) and **Ð** (Eth).</td>
+                            <td>**Þ/Ð** were replaced by the digraph **th**. New letters (K, J, V) adopted.</td>
+                            <td class="change-summary">Orthographic Shift</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Vowel Endings</td>
+                            <td>Unstressed final vowels were generally pronounced.</td>
+                            <td>Unstressed final vowels often reduced or lost (Loss of Final -e).</td>
+                            <td class="change-summary">Vowel Reduction</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 whitespace-nowrap font-medium">Pronunciation</td>
+                            <td>Vowels pronounced closer to continental European languages.</td>
+                            <td>The **Great Vowel Shift** began in Late ME, changing long vowel sounds.</td>
+                            <td class="change-summary">Major Vowel Changes Initiated</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Footer/Context -->
+        <footer class="text-center mt-8 p-4 text-stone-500 text-sm">
+            <p>The transition was largely driven by the Norman Conquest (1066), leading to language contact and linguistic simplification.</p>
+        </footer>
+    </div>
+
+<script>
+    /**
+     * Función para mostrar la sección seleccionada y actualizar el estilo del botón activo.
+     * @param {string} sectionId - El ID de la sección a mostrar ('grammar', 'vocabulary', 'sound').
+     */
+    function showSection(sectionId) {
+        // 1. Ocultar todas las tarjetas de contenido
+        document.querySelectorAll('.card-section').forEach(card => {
+            card.style.display = 'none';
+        });
+
+        // 2. Mostrar la tarjeta seleccionada
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.style.display = 'block';
+        }
+
+        // 3. Quitar el estilo 'active' de todos los botones
+        document.querySelectorAll('.tab-button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // 4. Añadir el estilo 'active' al botón que se hizo clic
+        const targetButton = document.getElementById('tab-' + sectionId);
+        if (targetButton) {
+            targetButton.classList.add('active');
+        }
+    }
+
+    // Inicialización: Muestra la sección de Gramática y activa su botón al cargar.
+    window.onload = function() {
+        showSection('grammar');
+    };
+</script>
+
+</body>
+</html>
